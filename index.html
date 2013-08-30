@@ -58,7 +58,7 @@
         <div id="main">
           <input id="toggle-all" type="checkbox">
           <label for="toggle-all">got it</label>
-          
+
           <ul id="grocery-list">
             <img src='images/spinner.gif' class='spinner' />
           </ul>
@@ -70,30 +70,30 @@
 
     <script type="text/template" id="item-template">
       <li class="<%= done ? 'completed' : '' %>">
-      	<div class="view">
-      	  <input class="toggle" type="checkbox" <%= done ? 'checked="checked"' : '' %>>
-      	  <label class="grocery-content"><%= content %></label>
-      	  <button class="grocery-destroy"></button>
-      	</div>
-      	<input class="edit" value="<%= content %>">
+        <div class="view">
+          <input class="toggle" type="checkbox" <%= done ? 'checked="checked"' : '' %>>
+          <label class="grocery-content"><%= content %></label>
+          <button class="grocery-destroy"></button>
+        </div>
+        <input class="edit" value="<%= content %>">
       </li>
     </script>
 
     <script type="text/template" id="stats-template">
       <footer id="footer">
-      	<span id="grocery-count"><strong><%= remaining %></strong> <%= remaining == 1 ? 'item' : 'items' %> left</span>
-      	<ul id="filters">
-      	  <li>
-      	    <a href="javascript:void(0)" id="all" class="selected">errthang</a>
-      	  </li>
-      	  <li>
-      	    <a href="javascript:void(0)" id="active">needz it</a>
-      	  </li>
-      	  <li>
-      	    <a href="javascript:void(0)" id="completed">gotz it</a>
-      	  </li>
-      	</ul>
-      	<button id="clear-completed">dump the oldz (<%= done %>)</button>
+        <span id="grocery-count"><strong><%= remaining %></strong> <%= remaining == 1 ? 'item' : 'items' %> left</span>
+        <ul id="filters">
+          <li>
+            <a href="javascript:void(0)" id="all" class="selected">errthang</a>
+          </li>
+          <li>
+            <a href="javascript:void(0)" id="active">needz it</a>
+          </li>
+          <li>
+            <a href="javascript:void(0)" id="completed">gotz it</a>
+          </li>
+        </ul>
+        <button id="clear-completed">dump the oldz (<%= done %>)</button>
       </footer>
     </script>
 

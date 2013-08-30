@@ -64,11 +64,11 @@ $(function() {
     template: _.template($('#item-template').html()),
 
     events: {
-      "click .toggle"               : "toggleDone",
-      "dblclick label.todo-content" : "edit",
-      "click .grocery-destroy"      : "clear",
-      "keypress .edit"              : "updateOnEnter",
-      "blur .edit"                  : "close"
+      "click .toggle"                  : "toggleDone",
+      "dblclick label.grocery-content" : "edit",
+      "click .grocery-destroy"         : "clear",
+      "keypress .edit"                 : "updateOnEnter",
+      "blur .edit"                     : "close"
     },
 
     initialize: function() {
@@ -112,7 +112,7 @@ $(function() {
     statsTemplate: _.template($('#stats-template').html()),
 
     events: {
-      "keypress #new-todo":  "createOnEnter",
+      "keypress #new-grocery":  "createOnEnter",
       "click #clear-completed": "clearCompleted",
       "click #toggle-all": "toggleAllComplete",
       "click .log-out": "logOut",
@@ -205,8 +205,8 @@ $(function() {
 
     addSome: function(filter) {
       var self = this;
-      this.$("#groceries-list").html("");
-      this.todos.chain().filter(filter).each(function(item) { self.addOne(item) });
+      this.$("#grocery-list").html(" ");
+      this.groceries.chain().filter(filter).each(function(item) { self.addOne(item) });
     },
 
     createOnEnter: function(e) {
@@ -226,7 +226,7 @@ $(function() {
     },
 
     clearCompleted: function() {
-      _.each(this.groceries.done(), function(grocery){ todo.destroy(); });
+      _.each(this.groceries.done(), function(grocery){ grocery.destroy(); });
       return false;
     },
 
