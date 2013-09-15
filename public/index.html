@@ -14,7 +14,7 @@
 
     <div id="groceriesapp">
       <div class="title">
-        <h1>Kiefhaber Groceries</h1>
+        <h1>The List</h1>
       </div>
 
       <div class="content">
@@ -27,32 +27,32 @@
       <header id="header"></header>
       <div class="login">
         <form class="login-form">
-          <h2>Lorg In Plz</h2>
+          <h2>Log In</h2>
           <div class="error" style="display:none"></div>
-          <input type="text" id="login-username" placeholder="pt ur nm hr plz" />
+          <input type="text" id="login-username" placeholder="name" />
           <input type="password" id="login-password" placeholder="psswrd" />
-          <button>Lorg In</button>
+          <button>Log In</button>
         </form>
 
         <form class="signup-form">
-          <h2>Sign Urp</h2>
+          <h2>Sign Up</h2>
           <div class="error" style="display:none"></div>
           <input type="text" id="signup-username" placeholder="usrnme" />
           <input type="password" id="signup-password" placeholder="psswrd" />
-          <button>Sign Urp</button>
+          <button>Sign Up</button>
         </form>
       </div>
     </script>
 
     <script type="text/template" id="manage-groceries-template">
       <div id="user-info">
-        Signed in as <%= Parse.User.current().get("username") %> (<a href="#" class="log-out">Log out</a>)
+       <%= Parse.User.current().get("username") %>'s list (<a href="#" class="log-out">Log out</a>)
       </div>
 
       <div class="section">
 
         <header id="header">
-          <input id="new-grocery" placeholder="satisfy dat craving" type="text" />
+          <input id="new-grocery" placeholder="what you need?" type="text" />
         </header>
 
         <div id="main">
@@ -84,16 +84,16 @@
         <span id="grocery-count"><strong><%= remaining %></strong> <%= remaining == 1 ? 'item' : 'items' %> left</span>
         <ul id="filters">
           <li>
-            <a href="javascript:void(0)" id="all" class="selected">errthang</a>
+            <a href="javascript:void(0)" id="all" class="selected">everything</a>
           </li>
           <li>
-            <a href="javascript:void(0)" id="active">needz it</a>
+            <a href="javascript:void(0)" id="active">need it</a>
           </li>
           <li>
-            <a href="javascript:void(0)" id="completed">gotz it</a>
+            <a href="javascript:void(0)" id="completed">got it</a>
           </li>
         </ul>
-        <button id="clear-completed">dump the oldz (<%= done %>)</button>
+        <button id="clear-completed"> clear old items (<%= done %>)</button>
       </footer>
     </script>
 
