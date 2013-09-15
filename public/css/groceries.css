@@ -32,6 +32,10 @@ body {
     font-smoothing: antialiased;
 }
 
+.title {
+  margin-top: 50px;
+}
+
 #groceryapp {
     background: #fff;
     background: rgba(255, 255, 255, 0.9);
@@ -420,9 +424,9 @@ label[for='toggle-all'] {
 #groceryapp .content .login input {
     display: block;
     margin-bottom: 10px;
-    font-size: 20px;
-    padding: 5px;
-    width: 340px;;
+    font-size: 30px;
+    padding: 15px;
+    width: 20%;
 }
 
 #groceryapp .content .login .signup-form {
